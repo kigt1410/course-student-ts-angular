@@ -1,0 +1,20 @@
+<h1>Students: </h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(student of students; track student) {
+      <tr [class]="{ 'table-success': student.score >= 90, 'table-warning': student.score >= 60 && student.score < 90, 'table-danger': student.score < 60 }">
+        <td>{{ student.firstName }}</td>
+        <td>{{ student.lastName }}</td>
+        <td>{{ student.score }}</td>
+      </tr>
+    }
+
+  </tbody>
+</table>

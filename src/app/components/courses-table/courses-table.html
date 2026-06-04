@@ -1,0 +1,19 @@
+<h1>Courses: </h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Subject</th>
+      <th scope="col">Difficulty</th>
+      <th scope="col">Requirement</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(course of courses; track course) {
+      <tr>
+        <td>{{ course.subject }}</td>
+        <td>{{ course.difficulty }}</td>
+        <td>{{ course.requirement }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
